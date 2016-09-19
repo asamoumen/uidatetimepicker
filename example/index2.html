@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="MyController as ctrl">
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.0/ui-bootstrap-tpls.js"></script>
+    <script src="../dist/datetime-picker.min.js"></script>
+    <script src="index2.js"></script>
+</head>
+<body style="padding:10px;" class="container-fluid">
+
+<div>
+    <p class="input-group" style="width:280px;">
+        <input type="text" disabled class="form-control" datetime-picker="dd-MM-yyyy HH:mm" 
+        ng-model="ctrl.picker.date" is-open="ctrl.picker.open" button-bar="ctrl.picker.buttonBar" 
+        when-closed="ctrl.picker.closed(args)" datepicker-options="ctrl.picker.datepickerOptions"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="ctrl.openCalendar($event, 'picker')">
+                <i class="fa fa-calendar"></i>
+            </button>
+        </span>
+    </p>
+</div>
+</body>
+
+</html>
